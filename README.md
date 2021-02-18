@@ -1,1 +1,1 @@
-[НЕ НАЖИМАТЬ](https://github.com/sekibura/MPI/blob/main/Lab1/Source.cpp)
+[НЕ НАЖИМАТЬ](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO)

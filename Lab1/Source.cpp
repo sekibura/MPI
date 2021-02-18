@@ -16,7 +16,7 @@ int main(int* argc, char **argv) {
 void star(int* argc, char** argv) {
 	int ProcNum, ProcRank, RecvRank;
 	int MainProcRank = 0;
-	int M = 5;
+	int M = 1;
 	MPI_Status Status;
 
 	MPI_Init(argc, &argv);

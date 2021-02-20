@@ -44,12 +44,12 @@ void star(int* argc, char** argv) {
 		MPI_Scatter(valMain, 1, MPI_INT, &valSlaves, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
 		//check recive from main
-		if (ProcRank != MainProcRank &&valSlaves ==1)
+		if (ProcRank != MainProcRank && valSlaves == 1) {
 			printf("Message from MainProc is received by %d process\n", ProcRank);
-		
-		// send message from all to main
-		MPI_Gather(&valSlaves, 1, MPI_INT, valMain, 1, MPI_INT, 0, MPI_COMM_WORLD);
-
+			// send message from all to main
+			MPI_Gather(&valSlaves, 1, MPI_INT, valMain, 1, MPI_INT, 0, MPI_COMM_WORLD);
+		}
+			
 		//check recive from all by main
 		if (ProcRank == MainProcRank) {
 			bool a = true;

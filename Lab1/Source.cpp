@@ -32,12 +32,13 @@ void star(int* argc, char** argv) {
 
 			for (int i = 1; i < ProcNum; i++) {
 				MPI_Recv(&RecvRank, 1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &Status);
-				printf("\n Answer from process %3d\n", RecvRank);
+				printf("\nAnswer from process %d to %d process \n", RecvRank, ProcRank);
 			}
 		}
 		else
 		{
 			MPI_Recv(&RecvRank, 1, MPI_INT, 0, MPI_ANY_TAG, MPI_COMM_WORLD, &Status);
+			printf("\nMessage received from process %d to %d process \n", RecvRank, ProcRank);
 			MPI_Send(&ProcRank, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
 		}
 	}

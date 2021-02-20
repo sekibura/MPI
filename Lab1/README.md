@@ -7,7 +7,7 @@
 
 [Код программы](https://github.com/sekibura/MPI/blob/main/Lab1/Source.cpp)
 #### Работа программы:
-![image](https://user-images.githubusercontent.com/51335422/108347680-d9cbc800-71f1-11eb-9072-ad41f0986fca.png)
+![image](https://user-images.githubusercontent.com/51335422/108596388-c194ae00-7395-11eb-8d05-c25764fe0ab6.png)
 
 На скриншоте видно ответы от процессов, которые получил главный процесс при M=1(количество повторений процесса *диалога*) и количестве процессов = 4 (считая главный).
 

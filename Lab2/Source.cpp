@@ -32,15 +32,28 @@ void star(int* argc, char** argv) {
 	for (int i = 0; i < M; i++)
 	{
 	
-		val = 1;
+		if (ProcRank != MainProcRank)
+			val = 0;
+
 		MPI_Bcast(&val, 1, MPI_INT, 0, MPI_COMM_WORLD);
+		if (ProcRank != MainProcRank) {
+			if (val == 1) {
+				printf("\n Get msg from main process by %3d\n", ProcRank);
+				
+			}
+			else {
+				printf("\n DNT get msg from main process by %3d\n", ProcRank);
+			}
+		}
 		MPI_Reduce(&val, &TotalSum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
-	
-		if(ProcRank == MainProcRank)
-			printf("\n Answers from process = %3d\n", TotalSum-1);
 
-
-	
+		if ((ProcRank == MainProcRank) ) {
+			if (TotalSum == 4) 
+				printf("\nSuccess, all answers received \n");
+			else
+				printf("\Error\n");
+			
+		}
 	}
 	
 	MPI_Finalize();

@@ -24,10 +24,13 @@ void star(int* argc, char** argv) {
 	int TotalSum = 0;
 	int M = 1;
 	int val = 1;
+	double t1, t2, dt;
 
 	MPI_Init(argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &ProcRank);
 	MPI_Comm_size(MPI_COMM_WORLD, &ProcNum);
+	if(ProcRank==MainProcRank)	
+		t1 = MPI_Wtime();
 
 	for (int i = 0; i < M; i++)
 	{
@@ -55,6 +58,15 @@ void star(int* argc, char** argv) {
 			
 		}
 	}
-	
+	if (ProcRank == MainProcRank) 
+	{
+		t2 = MPI_Wtime();
+		dt = t2 - t1;
+		printf("\nTIME = %f\n", dt);
+	}
+
+
 	MPI_Finalize();
+
+
 }

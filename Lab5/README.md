@@ -1,16 +1,15 @@
-# Отчет о выполнении лабораторной работы №4
-## Производные типы данных в MPI
+# Отчет о выполнении лабораторной работы №5
+## Управление группами процессов и коммуникаторами
 ### Задание
 #### Реализуйте тип "комплексная матрица". Напишите программу, которая осуществляет умножение А матриц размером NxN методом Штрассена.
 
 
 
-[Код программы](https://github.com/sekibura/MPI/blob/main/Lab4_new/Source.cpp)
+[Код программы](https://github.com/sekibura/MPI/blob/main/Lab5/Source.cpp)
 #### Работа программы:
-![image](https://user-images.githubusercontent.com/51335422/121813982-525e0500-cc77-11eb-9cda-23349f15c5c0.png)
+![Безымянный](https://user-images.githubusercontent.com/51335422/121814507-2001d700-cc7a-11eb-9dbb-b7f9aa9b3b38.png)
 
-Проверка результата на сайте https://matematika-club.ru/kalkulyator-bolshih-chisel
-![image](https://user-images.githubusercontent.com/51335422/121813989-6144b780-cc77-11eb-89d3-70370e9dc8aa.png)
+
 
 
 
